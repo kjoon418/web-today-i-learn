@@ -6,42 +6,64 @@
 
     <meta property="og:title" content="The blog of Jun Watson" />
     <meta property="og:description" content="프로필, 기본 정보, 갤러리, 인생 작품, TIL을 담은 나만의 학습 기록 페이지입니다." />
-    <meta property="og:image" content="./images/thumbnail.svg" />
+    <meta property="og:image" content="./images/profile.jpg" />
 
     <title>TIL of Jun Watson</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/index.js" defer></script>
   </head>
   <body>
-    <!-- 상단 내비게이션 -->
-    <nav class="top-nav">
-      <span class="nav-logo">The blog of Jun Watson</span>
-      <ul class="nav-links">
-        <li><a href="#profile">프로필</a></li>
-        <li><a href="#intro">자기소개</a></li>
-        <li><a href="#info">기본 정보</a></li>
-        <li><a href="#gallery">갤러리</a></li>
-        <li><a href="#works">인생 작품</a></li>
-        <li><a href="#til">TIL</a></li>
-      </ul>
-    </nav>
-
-    <!-- 프로필 영역 -->
-    <header class="hero" id="profile">
-      <div class="profile-card">
-        <div class="profile-image">
-          <img src="./images/profile.jpg" alt="나를 가장 잘 소개하는 프로필 사진" />
-        </div>
-        <div class="profile-info">
-          <h1>왓슨</h1>
-          <p class="tagline">가독성 좋은 코드를 찾아 헤매는 백엔드 개발자입니다.</p>
-        </div>
-      </div>
+    <header>
+      <div class="logo">VISION</div>
+      <nav>
+        <ul>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#intro">About</a></li>
+          <li><a href="#info">Info</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#til">TIL</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <!-- 자기소개 -->
-      <section class="content-section" id="intro">
+      <section id="profile" class="section-container">
+        <div class="profile-content">
+          <img src="./images/profile.jpg" alt="나를 가장 잘 소개하는 프로필 사진" class="profile-img" />
+          <div class="profile-text">
+            <span class="badge">Backend Developer</span>
+            <h1>안녕하세요,<br />왓슨입니다.</h1>
+            <p>가독성 좋은 코드란 무엇인지를 찾아 헤매는 백엔드 개발자입니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="info" class="section-container bg-light">
+        <h2>기본 정보</h2>
+        <table class="info-table">
+          <tbody>
+            <tr>
+              <th>이름</th>
+              <td>김준</td>
+            </tr>
+            <tr>
+              <th>MBTI</th>
+              <td>ISTP</td>
+            </tr>
+            <tr>
+              <th>취미</th>
+              <td>웨이트 트레이닝, 게임</td>
+            </tr>
+            <tr>
+              <th>좋아하는 음식</th>
+              <td>치킨, 닭가슴살</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="intro" class="section-container">
         <h2>자기소개</h2>
         <p>
           안녕하세요! 저는 웹 개발을 배우고 있는 학습자입니다. 매일 조금씩 성장하는 것을 목표로
@@ -51,35 +73,15 @@
           학습 내용을 정리하고 있습니다. 꾸준함이 가장 큰 무기라고 생각하며, 오늘 배운 것을
           기록하는 이 TIL 페이지를 통해 성장 과정을 남기고자 합니다.
         </p>
+        <div class="link-buttons">
+          <a href="https://github.com/kjoon418" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub 방문하기</a>
+          <a href="https://velog.io/@kjoon418/posts" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--velog">블로그 방문하기</a>
+        </div>
       </section>
 
-      <!-- 기본 정보 -->
-      <section class="content-section" id="info">
-        <h2>기본 정보</h2>
-        <table class="info-table">
-          <tr>
-            <th>이름</th>
-            <td>김준</td>
-          </tr>
-          <tr>
-            <th>MBTI</th>
-            <td>ISTP</td>
-          </tr>
-          <tr>
-            <th>취미</th>
-            <td>웨이트 트레이닝, 게임</td>
-          </tr>
-          <tr>
-            <th>좋아하는 음식</th>
-            <td>치킨, 닭가슴살</td>
-          </tr>
-        </table>
-      </section>
-
-      <!-- 나만의 갤러리 -->
-      <section class="content-section" id="gallery">
+      <section id="gallery" class="section-container">
         <h2>나만의 갤러리</h2>
-        <h3 class="section-desc">애용.</h3>
+        <p class="section-desc">애용.</p>
         <div class="gallery-grid">
           <img src="./images/gallery-1.jpg" alt="갤러리 이미지 1" />
           <img src="./images/gallery-2.jpg" alt="갤러리 이미지 2" />
@@ -93,107 +95,97 @@
         </div>
       </section>
 
-      <!-- 나를 울린 인생 작품 -->
-      <section class="content-section" id="works">
+      <section id="works" class="section-container bg-light">
         <h2>나를 울린 인생 작품</h2>
-        <ol class="works-list">
+        <ul class="masterpiece-list">
           <li>
-            <article class="work-card">
-              <div class="work-media">
-                <iframe
-                  src="https://www.youtube.com/embed/92a7Hj0ijLs"
-                  title="이웃집 토토로 트레일러"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <div class="work-info">
-                <h3>인생 영화 - 이웃집 토토로</h3>
-                <p>
-                  미야자키 하야오 특유의 섬세한 작화로, 아이들의 순수함과 그 일상을 따뜻하게 그려낸 영화입니다.<br>
-                  불안하고 여린 자매의 마음을 포근하게 감싸주는 토토로는, 이 영화가 시대를 넘어서도 사랑받도록 만들어 주었습니다.
-                </p>
-              </div>
-            </article>
+            <iframe
+              width="100%"
+              height="250"
+              src="https://www.youtube.com/embed/92a7Hj0ijLs"
+              title="이웃집 토토로 트레일러"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <h3>인생 영화 - 이웃집 토토로</h3>
+            <p>
+              미야자키 하야오 특유의 섬세한 작화로, 아이들의 순수함과 그 일상을 따뜻하게 그려낸 영화입니다.<br>
+              불안하고 여린 자매의 마음을 포근하게 감싸주는 토토로는, 이 영화가 시대를 넘어서도 사랑받도록 만들어 주었습니다.
+            </p>
           </li>
           <li>
-            <article class="work-card">
-              <div class="work-thumbnail">
-                <img src="./images/함께%20자라기.jpg" alt="인생 책 표지" />
-              </div>
-              <div class="work-info">
-                <h3>인생 책</h3>
-                <p>
-                  "고객에게 매일 가치를 전하라."<br>
-                  당신의 조직은, 이해관계자들과 함께 자라고 있나요?<br>
-                  애자일을 '어떻게' 하는지는 알고 있지만 '왜' 하는지를 모른다면 이 책을 읽을 차례입니다.
-                </p>
-              </div>
-            </article>
+            <img src="./images/함께%20자라기.jpg" alt="함께 자라기 책 표지" />
+            <h3>인생 책 - 함께 자라기</h3>
+            <p>
+              "고객에게 매일 가치를 전하라."<br>
+              당신의 조직은 이해관계자들과 함께 자라고 있나요?<br>
+              애자일을 '어떻게' 하는지는 알고 있지만 '왜' 하는지를 모른다면 이 책을 읽을 차례입니다.
+            </p>
           </li>
-        </ol>
+        </ul>
       </section>
 
-      <!-- TIL (Today I Learned) -->
-      <section class="content-section" id="til">
-        <h2>TIL</h2>
-        <p class="section-desc">오늘 새롭게 배운 것들을 기록합니다.</p>
+      <section id="til" class="section-container">
+        <div class="til-header">
+          <h2>Today I Learned</h2>
+          <p>오늘 새롭게 배운 것들을 기록합니다.</p>
+        </div>
 
-        <!-- TIL 작성 폼 (3단계에서 JavaScript로 동작 추가) -->
-        <form class="til-form" id="til-form">
+        <form id="til-form" class="til-form">
           <div class="form-group">
             <label for="til-date">날짜</label>
             <input type="date" id="til-date" name="date" required />
           </div>
           <div class="form-group">
-            <label for="til-title">제목</label>
+            <label for="til-title">학습 주제</label>
             <input
               type="text"
               id="til-title"
               name="title"
-              placeholder="학습 주제를 입력하세요"
+              placeholder="예: HTML 시멘틱 태그, CSS Grid"
               required
             />
           </div>
           <div class="form-group">
-            <label for="til-content">내용</label>
+            <label for="til-content">학습 내용</label>
             <textarea
               id="til-content"
               name="content"
-              placeholder="오늘 배운 내용을 정리해주세요"
+              rows="4"
+              placeholder="오늘 새롭게 알게 된 내용을 작성해주세요."
               required
             ></textarea>
           </div>
           <div class="form-actions">
-            <button type="submit">등록</button>
+            <button type="submit">기록 추가하기</button>
             <button type="reset">초기화</button>
           </div>
         </form>
 
-        <!-- TIL 목록 -->
-        <div class="til-list" id="til-list">
-          <article class="til-item">
-            <time datetime="2026-03-18">2026-03-18</time>
+        <ul id="til-list" class="til-list">
+          <li class="til-item">
+            <span class="til-date">2026-03-18</span>
             <h3>HTML 시멘틱 태그</h3>
             <p>
               header, nav, main, section, article, footer 등 시멘틱 태그의 역할과 사용법을
               배웠다. 웹 문서의 구조를 의미 있게 구성하면 접근성과 SEO에 도움이 된다.
             </p>
-          </article>
-          <article class="til-item">
-            <time datetime="2026-03-15">2026-03-15</time>
+          </li>
+          <li class="til-item">
+            <span class="til-date">2026-03-15</span>
             <h3>상대 경로와 절대 경로</h3>
             <p>
               리소스를 불러올 때 상대 경로(./images/photo.jpg)와 절대 경로의 차이를 배웠다.
               프로젝트 이식성을 위해 상대 경로 사용을 권장한다.
             </p>
-          </article>
-        </div>
+          </li>
+        </ul>
       </section>
     </main>
 
     <footer>
-      <p>&copy; Today I Learn</p>
+      <p>© 2026 Jun Watson. All rights reserved.</p>
     </footer>
   </body>
 </html>

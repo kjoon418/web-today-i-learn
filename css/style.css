@@ -1,0 +1,337 @@
+/* 기본 초기화 및 폰트 설정 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fcfcfc;
+}
+
+.section-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.bg-light {
+  background-color: #f7f8fa;
+}
+
+/* Header & Nav */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+/* Profile */
+.profile-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.badge {
+  background-color: #000;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.profile-text h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.profile-text p {
+  color: #666;
+}
+
+/* Section 공통 */
+.section-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.section-container > p,
+.section-desc {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.section-container a:not(.link-btn) {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.section-container a:not(.link-btn):hover {
+  color: #004499;
+}
+
+/* Link Buttons */
+.link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.link-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.link-btn:hover {
+  opacity: 0.85;
+}
+
+.link-btn--velog {
+  background-color: #20c997;
+}
+
+.link-btn--velog:hover {
+  opacity: 0.9;
+}
+
+/* Table */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-table th,
+.info-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.info-table th {
+  background-color: #fdfdfd;
+  text-align: left;
+  width: 30%;
+  color: #666;
+  font-weight: 600;
+}
+
+.info-table tr:last-child th,
+.info-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+}
+
+/* Masterpiece */
+.masterpiece-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+
+.masterpiece-list li {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.masterpiece-list iframe,
+.masterpiece-list img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.masterpiece-list h3 {
+  padding: 15px 15px 8px;
+  font-size: 1.1rem;
+}
+
+.masterpiece-list p {
+  padding: 0 15px 15px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* TIL Form */
+#til-form {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#til-form button[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+#til-form button[type="reset"] {
+  background-color: #eee;
+  color: #666;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* TIL Header */
+.til-header {
+  margin-bottom: 24px;
+}
+
+.til-header p {
+  color: #666;
+  margin-top: 8px;
+}
+
+/* TIL List */
+.til-list {
+  list-style: none;
+}
+
+.til-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.til-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.til-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.til-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-size: 0.9rem;
+}
