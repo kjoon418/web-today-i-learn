@@ -1,4 +1,12 @@
 -- 문제 1: 테이블 생성하기
+/* attendance 테이블은 중복된 데이터가 쌓이는 구조이다. 중복된 데이터는 어떤 컬럼인가?
+   crew_id와 nickname 컬럼의 데이터가 중복되어 쌓입니다.
+   둘 다 '크루'에 대한 정보를 담는 컬럼입니다.
+*/
+/* attendance 테이블에서 중복을 제거하기 위해 crew 테이블을 만들려고 한다. 어떻게 구성해 볼 수 있을까?
+   attendance 테이블에 존재하는 crew_id와 nickname 컬럼을 중복 없이 조회하여, 그 값을 crew 테이블로 구성하면 됩니다.
+*/
+
 -- 크루들의 정보 추출
 SELECT DISTINCT crew_id, nickname
 FROM attendance;
@@ -17,6 +25,9 @@ FROM attendance;
 
 
 -- 문제 2: 테이블 컬럼 삭제하기
+/* crew 테이블을 만들고 중복을 제거했다. attendance에서 불필요해지는 컬럼은?
+   크루를 식별하기 위해 crew_id는 필요하므로, nickname 컬럼만 불필요합니다.
+*/
 ALTER TABLE attendance
 DROP COLUMN nickname;
 
